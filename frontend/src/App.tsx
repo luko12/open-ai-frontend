@@ -18,7 +18,7 @@ function App() {
   const search = async () => {
     setLoading(true)
     console.log('question:', question, 'state:', appState, 'utility:', appUtility)
-    const response = await (await fetch(`http://127.0.0.1:8000/openAI/${appState}/${appUtility}`,
+    const response = await (await fetch(`http://AppLB-498226653.us-east-1.elb.amazonaws.com/openAI/${appState}/${appUtility}`,
     {
       method: "GET",
       headers: {
